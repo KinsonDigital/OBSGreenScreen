@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <RootNamespace>Tutorial</RootNamespace>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
+      <PackageReference Include="Silk.NET" Version="2.8.0" />
+      <PackageReference Include="System.IO.Abstractions" Version="13.2.47" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Shaders\circle.frag" />
+      <None Remove="Shaders\circle.vert" />
+      <None Remove="Shaders\rectangle.frag" />
+      <None Remove="Shaders\rectangle.vert" />
+      <None Remove="Shaders\shape.frag" />
+      <None Remove="Shaders\shape.vert" />
+      <None Remove="Shaders\line.frag" />
+      <EmbeddedResource Include="Shaders\line.frag" />
+      <None Remove="Shaders\line.vert" />
+      <EmbeddedResource Include="Shaders\line.vert" />
+      <None Remove="Shaders\rect.frag" />
+      <EmbeddedResource Include="Shaders\rect.frag" />
+      <None Remove="Shaders\rect.vert" />
+      <EmbeddedResource Include="Shaders\rect.vert" />
+      <None Remove="Shaders\ellipse.frag" />
+      <EmbeddedResource Include="Shaders\ellipse.frag" />
+      <None Remove="Shaders\ellipse.vert" />
+      <EmbeddedResource Include="Shaders\ellipse.vert" />
+    </ItemGroup>
+
+</Project>
